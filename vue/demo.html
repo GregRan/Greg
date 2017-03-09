@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="box">
+			<button v-on:click="show()">按钮</button>
+			<div style="width: 100px;height: 100px;background:red;" v-show="a"></div>
+		</div>
+		<script>
+		   new Vue({
+		   		el:".box",
+		   		data:{
+		   			a:true
+		   		},
+		   		methods:{
+		   			show:function(){
+		   				if(this.a==true){
+		   					this.a=false
+		   				}else {
+		   					this.a=true
+		   				}
+		   				
+		   			}
+		   		}
+		   })
+		</script>
+	</body>
+</html>
